@@ -5,8 +5,7 @@ export const ContainerAside = styled.aside`
     top: 0;
     right: 0;
     background-color: ${props => props.theme.colors.secondary};
-    box
-    z-index: 1;
+    z-index: 1 !important;
     height: 100vh;
     width: 3rem;
     box-shadow: 0 0 10px 5px ${props => props.theme.colors.shadow};

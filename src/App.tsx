@@ -9,6 +9,7 @@ import { ThemeProvider } from 'styled-components';
 import Header from './components/header';
 import Sidebar from './components/sidebar';
 import Hero from './components/hero';
+import Repositories from './components/repositories';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Sidebar />
         <Header />
         <Hero />
+        <Repositories />
       </ThemeProvider>
     </div>
   );

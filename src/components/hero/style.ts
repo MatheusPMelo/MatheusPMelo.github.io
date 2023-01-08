@@ -10,15 +10,20 @@ export const ContainerFullWidth = styled.div`
   }
 `
 
-export const Container = styled.header`
+export const Container = styled.section`
     max-width: calc(1170px + 2rem);
-    //padding: 0 1rem;
+    padding: 0 1rem;
     margin: 0 auto;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     
+    @media (min-width: 2000px) {
+        max-width: calc(1170px + 5rem);
+        padding: 0;
+    }
+
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
         height: 35vh;
@@ -34,6 +39,7 @@ export const Container = styled.header`
 
         @media (max-width: 600px) {
             place-items: center;
+            padding: 1rem;
         }
 
         .texts{
@@ -45,7 +51,7 @@ export const Container = styled.header`
                 @media (max-width: 600px) {
                     margin-top: 1.5rem;
                     text-align: center;
-                    font-size: 2rem;
+                    font-size: 2.2rem;
                 }
             }
 

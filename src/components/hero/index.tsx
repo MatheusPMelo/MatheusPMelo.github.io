@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
                 <div className="container-text">
                     <div className="texts">
                         <h1 className='hero-title'>Desenvolvedor <ReactTypingEffect eraseDelay={2500} speed={300} text={["Front End", "Mobile"]} /></h1>
-                        <p>React e React Native</p>
+                        <p>Vue, React e React Native</p>
                     </div>
                     <a href="#contact">Contato</a>
                 </div>

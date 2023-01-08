@@ -5,7 +5,7 @@ export default createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
         transition: all .3s ease;
     }
 
@@ -39,6 +39,11 @@ export default createGlobalStyle`
         @media(max-width: 500px) {
             font-size: 1rem;
         }
+    }
+
+    a{
+        text-decoration: none;
+        color: ${props => props.theme.colors.secondary};
     }
 `;
 
