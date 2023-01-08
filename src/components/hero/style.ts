@@ -22,22 +22,26 @@ export const Container = styled.header`
         grid-template-columns: 1fr;
         height: 35vh;
         padding-top: 1.5rem;
+        width: unset;
+        padding: unset;
     }
 
     .container-text{
         display: grid;
         row-gap: 1rem;
+        width: 100%;
 
         @media (max-width: 600px) {
             place-items: center;
         }
 
-        h1 {
+        .hero-title {
             font-size: 2.5rem;
 
             @media (max-width: 600px) {
+                margin-top: 1.5rem;
                 text-align: center;
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
         }
 
@@ -46,7 +50,7 @@ export const Container = styled.header`
 
             @media (max-width: 600px) {
                 text-align: center;
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
         }
 
@@ -81,6 +85,7 @@ export const Container = styled.header`
     .container-image {
         display: flex;
         align-items: center;
+        width: 100%;
 
         img {
             max-width: 800px;
