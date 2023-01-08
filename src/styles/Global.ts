@@ -43,10 +43,15 @@ export default createGlobalStyle`
 `;
 
 export const WidthContainer = styled.div`
-    max-width: calc(1170px + 2rem);
+    max-width: calc(1170px + 3rem);
     padding: 0 1rem;
     margin: 0 auto;
     width: 100%;
+
+    @media(min-width: 2000px) {
+        max-width: calc(1170px + 5rem);
+        padding: 0;
+    }
 `;
 
 export const RowCenter = styled.div`
