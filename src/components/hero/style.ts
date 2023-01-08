@@ -11,48 +11,61 @@ export const ContainerFullWidth = styled.div`
 `
 
 export const Container = styled.header`
-    padding: 0 2rem;
+    max-width: calc(1170px + 2rem);
+    //padding: 0 1rem;
+    margin: 0 auto;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    place-items: center;
-    margin: 0 20px;
-    width: 100%;
+    align-items: center;
     
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
         height: 35vh;
         padding-top: 1.5rem;
+        width: unset;
+        padding: unset;
     }
 
     .container-text{
         display: grid;
-        row-gap: 1rem;
+        width: 100%;
+        height: 300px;
 
         @media (max-width: 600px) {
             place-items: center;
         }
 
-        h1 {
-            font-size: 2.5rem;
+        .texts{
+            display: grid;
+            
+            .hero-title {
+                font-size: 2.5rem;
 
-            @media (max-width: 600px) {
-                text-align: center;
-                font-size: 1.5rem;
+                @media (max-width: 600px) {
+                    margin-top: 1.5rem;
+                    text-align: center;
+                    font-size: 2rem;
+                }
             }
-        }
 
-        p {
-            font-size: 1.5rem;
+            p {
+                font-size: 1.5rem;
 
-            @media (max-width: 600px) {
-                text-align: center;
-                font-size: 1rem;
+                @media (max-width: 600px) {
+                    text-align: center;
+                    font-size: 1.3rem;
+                }
             }
         }
 
         a {
             background: ${props => props.theme.colors.secondary};
             width: 50%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             padding: 1rem;
             border-radius: 10px;
@@ -81,6 +94,7 @@ export const Container = styled.header`
     .container-image {
         display: flex;
         align-items: center;
+        width: 100%;
 
         img {
             max-width: 800px;

@@ -6,7 +6,7 @@ export const ContainerAside = styled.aside`
     right: 0;
     background-color: ${props => props.theme.colors.secondary};
     box
-    z-index: 1000;
+    z-index: 1;
     height: 100vh;
     width: 3rem;
     box-shadow: 0 0 10px 5px ${props => props.theme.colors.shadow};
@@ -24,6 +24,15 @@ export const ContainerAside = styled.aside`
         }
     }
 
+    @media (max-width: 600px) {
+        width: 100vw;
+        height: 4rem;
+        left: 0;
+        top: calc(100% - 4rem);
+        display: grid;
+        place-items: center;
+    }
+
     .containerNav {
         .listNav {
             display: flex;
@@ -31,6 +40,14 @@ export const ContainerAside = styled.aside`
             justify-content: center;
             row-gap: 2rem;
             height: 100vh;
+
+            @media (max-width: 600px) {
+                flex-direction: row;
+                align-items: center;
+                height: 2rem;
+                column-gap: 2rem;
+            }
+
             li {
                 list-style: none;
                 a {
@@ -53,6 +70,13 @@ export const ContainerAside = styled.aside`
 
                     &:hover::after{
                         height: 4px;
+                    }
+
+                    svg {
+                        @media (max-width: 600px) {
+                            height: 1.5rem;
+                            width: 1.5rem;
+                        }
                     }
                 }
             }
