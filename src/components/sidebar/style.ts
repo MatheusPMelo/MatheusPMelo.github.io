@@ -8,7 +8,7 @@ export const ContainerAside = styled.aside`
     box
     z-index: 1000;
     height: 100vh;
-    padding: 0 1rem;
+    width: 3rem;
     box-shadow: 0 0 10px 5px ${props => props.theme.colors.shadow};
 
     animation: loadAnimated 1.5s;
@@ -43,7 +43,7 @@ export const ContainerAside = styled.aside`
                     &::after{
                         content: "";
                         position: absolute;
-                        width: 100%;
+                        width: 20px;
                         height: 0px;
                         border-radius: 4px;
                         top:120%;

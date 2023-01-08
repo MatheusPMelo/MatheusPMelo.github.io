@@ -8,6 +8,7 @@ import { ThemeProvider } from 'styled-components';
 //Components
 import Header from './components/header';
 import Sidebar from './components/sidebar';
+import Hero from './components/hero';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
         <Sidebar />
         <Header />
+        <Hero />
       </ThemeProvider>
     </div>
   );

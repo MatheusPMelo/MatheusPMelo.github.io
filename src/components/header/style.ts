@@ -6,12 +6,18 @@ export const Container = styled.header`
     align-items: center;
     margin: 20px 0;
     width: 100%;
+
+    @media (max-width: 600px) {
+        justify-content: center;
+    }
 `
 
 export const Logo = styled.img`
-    max-width: 120px;
     width: 50px;
-    min-width: 60px;
     height: auto;
     object-fit: contain;
+
+    @media (max-width: 600px) {
+        width: 30px;
+    }
 `
