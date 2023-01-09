@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
                     <a href="#contact">Contato</a>
                 </div>
                 <div className="container-image">
-                    <img src="/image/hero.png" />
+                    <img src="/image/hero.png" alt="arte digital de um computador com linhas minimalistas"/>
                 </div>
             </Container>
         </ContainerFullWidth>
