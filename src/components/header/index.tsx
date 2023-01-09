@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Logo } from "./style";
 import { WidthContainer } from "../../styles/Global";
 
-import logo from "../../../public/image/logo.png"
+import logo from '../../assets/img/logo.png';
 
 const Header: React.FC = () => {
 

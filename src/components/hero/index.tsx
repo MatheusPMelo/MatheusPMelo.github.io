@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, ContainerFullWidth } from './style';
 import ReactTypingEffect from 'react-typing-effect';
-import hero from "../../../public/image/hero.png";
+import hero from '../../assets/img/hero.png';
 
 const Hero: React.FC = () => {
     return (
