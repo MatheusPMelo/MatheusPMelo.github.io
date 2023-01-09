@@ -49,7 +49,7 @@ const Repositories: React.FC = () => {
         <ContainerFullWidth id="repositories">
             <Container>
 
-                <h1>Projetos</h1>
+                <h1>Projects</h1>
 
                 <div className="container-cards">
                     {repositories.map(item => (

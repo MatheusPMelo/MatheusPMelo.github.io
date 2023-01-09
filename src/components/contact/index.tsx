@@ -13,7 +13,7 @@ interface IAboutMe {
 }
 
 interface IAboutCard {
-    image: string | undefined;
+    image: any;
     followers: string | undefined;
     following: string | undefined;
     company: string | undefined;
@@ -54,7 +54,7 @@ const SocialIcon: FC<ISocialIcon> = ({
     url,
 }) => (
     <div className="container-social-icon">
-        <a href={url} target="_blank">
+        <a href={url}>
             {icon}
         </a>
     </div>
@@ -69,7 +69,7 @@ const AboutMeCardData: FC<IAboutCard> = ({
 }) => (
     <AboutMeCard>
         <div className="container-img">
-            <img src={image} />
+            <img src={image} alt="minha foto de perfil do github"/>
         </div>
         <div className="container-content-text">
             <span className="company"><FaBuilding /> I work at {company}</span><br />

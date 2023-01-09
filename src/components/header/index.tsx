@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Logo } from "./style";
 import { WidthContainer } from "../../styles/Global";
 
+import logo from '../../assets/img/logo.png';
+
 const Header: React.FC = () => {
 
 
@@ -9,7 +11,7 @@ const Header: React.FC = () => {
         <WidthContainer>
             <Container>
                 <div className="container-logo">
-                    <Logo src="/image/logo.png" />
+                    <Logo src={logo} />
                 </div>
             </Container>
         </WidthContainer>
