@@ -54,7 +54,7 @@ const SocialIcon: FC<ISocialIcon> = ({
     url,
 }) => (
     <div className="container-social-icon">
-        <a href={url} target="_blank">
+        <a href={url}>
             {icon}
         </a>
     </div>
