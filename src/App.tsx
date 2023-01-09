@@ -10,6 +10,7 @@ import Header from './components/header';
 import Sidebar from './components/sidebar';
 import Hero from './components/hero';
 import Repositories from './components/repositories';
+import Contact from './components/contact';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Header />
         <Hero />
         <Repositories />
+        <Contact />
+
       </ThemeProvider>
     </div>
   );

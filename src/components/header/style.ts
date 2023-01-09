@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-   // padding: 0 2rem;
+    padding: 2rem 0;
     display: flex;
     align-items: center;
-    margin: 20px 0;
     width: 100%;
 
     @media (max-width: 600px) {
@@ -13,11 +12,10 @@ export const Container = styled.header`
 `
 
 export const Logo = styled.img`
-    width: 50px;
-    height: auto;
+    width: 150px;
     object-fit: contain;
 
     @media (max-width: 600px) {
-        width: 30px;
+        width: 100px;
     }
 `

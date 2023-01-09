@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContainerFullWidth = styled.div`
   width: calc(100% - 3rem);
   position: relative;
+  padding:  0 0 3rem 0;
 
   @media (max-width: 600px) {
     width: 100%;

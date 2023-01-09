@@ -15,7 +15,7 @@ const Items = [
     },
     {
         icon: <FaArchive />,
-        url: '#respositories',
+        url: '#repositories',
         title: 'Repositorios'
     },
     {

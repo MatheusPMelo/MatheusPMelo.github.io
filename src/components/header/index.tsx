@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <WidthContainer>
             <Container>
                 <div className="container-logo">
-                    <Logo src="https://img.freepik.com/free-icon/test-tube_318-234529.jpg?w=2000" />
+                    <Logo src="/image/logo.png" />
                 </div>
             </Container>
         </WidthContainer>
