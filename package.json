@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
-  "homepage": "./",
+  "homepage": "https://matheuspmelo.github.io/personal-website/",
   "private": true,
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
