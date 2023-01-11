@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
-import { Container, ContainerFullWidth, Card } from "./style";
+import { Container, ContainerFullWidth, Card, ContainerSeeMore } from "./style";
 import api from "../../services/api";
 
 interface IRepositories {
@@ -37,6 +37,7 @@ const CardItem: FC<ICardProps> = ({
 
 const Repositories: React.FC = () => {
     const [repositories, setResporitories] = useState<IRepositories[]>([])
+    const [pagination, setPagination] = useState<any>(4)
 
     useEffect(() => {
         api.get('/users/matheuspmelo/repos')
@@ -45,6 +46,10 @@ const Repositories: React.FC = () => {
             })
     }, [])
 
+    function incrementRepository() {
+        setPagination(pagination + 4)
+    }
+
     return (
         <ContainerFullWidth id="repositories">
             <Container>
@@ -52,7 +57,7 @@ const Repositories: React.FC = () => {
                 <h1>Projects</h1>
 
                 <div className="container-cards">
-                    {repositories.map(item => (
+                    {repositories.slice(0, pagination).map(item => (
                         <CardItem
                             link={item.html_url}
                             title={item.name}
@@ -61,6 +66,11 @@ const Repositories: React.FC = () => {
                         />
                     ))}
                 </div>
+                <ContainerSeeMore>
+                    {pagination <= repositories?.length && (
+                        <button onClick={incrementRepository}>See more</button>
+                    )}
+                </ContainerSeeMore>
             </Container>
         </ContainerFullWidth>
     )

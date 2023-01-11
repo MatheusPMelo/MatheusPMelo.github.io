@@ -35,6 +35,7 @@ export const Container = styled.section`
             
             @media (max-width: 600px) {
                 font-size: 2rem;
+                margin: 1rem 0;
             }
         }
         p {
@@ -53,9 +54,18 @@ export const Container = styled.section`
 
         >div {
             padding: 1rem;
+
+            @media (max-width: 600px) {
+                padding: 3rem 0 0 0;
+            }
             a > svg {
                 width: 30px;
                 height: 30px;
+
+                @media (max-width: 600px) {
+                    width: 45px;
+                    height: 45px;
+                }
             }
         }
     }
@@ -72,6 +82,7 @@ export const AboutMeCard = styled.div`
 
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
+        width: calc(100% - 1rem);
     }
 
     .container-img{
