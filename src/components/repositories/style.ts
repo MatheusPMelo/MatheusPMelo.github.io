@@ -60,3 +60,24 @@ export const Card = styled.div`
         margin: 30px 0;
     }
 `
+
+export const ContainerSeeMore = styled.div`
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    > button {
+        margin-top: 2rem;
+        padding: .5rem 2rem;
+        font-size: 1rem;
+        border: 1px solid transparent;
+        border-radius: .5rem;
+        color: #fff;
+        background: ${props => props.theme.colors.secondary};
+
+        &:hover {
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+    }
+`
