@@ -21,7 +21,7 @@ export const Container = styled.section`
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         grid-template-columns: 1fr;
     }
 
@@ -61,6 +61,13 @@ export const Container = styled.section`
             a > svg {
                 width: 30px;
                 height: 30px;
+                transition: all .2s ease-in-out;
+
+                @media (min-width: 768px) {
+                    &:hover{
+                        color: #fff;
+                    }
+                }
 
                 @media (max-width: 600px) {
                     width: 45px;
@@ -74,13 +81,13 @@ export const Container = styled.section`
 export const AboutMeCard = styled.div`
     background: ${props => props.theme.colors.secondary};
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
     align-items: center;
     padding: 1rem;
     border-radius: 1rem;
     width: 100%;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         grid-template-columns: 1fr;
         width: calc(100% - 1rem);
     }
