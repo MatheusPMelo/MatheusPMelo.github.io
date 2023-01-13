@@ -12,7 +12,7 @@ export const ContainerFullWidth = styled.div`
 
 export const Container = styled.section`
     max-width: calc(1170px + 2rem);
-    padding: 0 1rem;
+    padding: 1rem;
     margin: 0 auto;
     width: 100%;
     display: grid;
@@ -101,13 +101,19 @@ export const Container = styled.section`
         display: flex;
         align-items: center;
         width: 100%;
+        margin: 1rem;
 
         img {
             max-width: 800px;
             max-height: 800px;
-            width: 700px;
-            height: 700px;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
+
+            /* @media (min-width: 600px) and (max-width: 1024px) {
+                width: 100%;
+                height: 100%;
+            } */
 
             @media (max-width: 600px) {
                 display: none;
