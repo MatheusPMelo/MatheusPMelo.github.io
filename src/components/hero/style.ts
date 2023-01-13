@@ -101,6 +101,7 @@ export const Container = styled.section`
         display: flex;
         align-items: center;
         width: 100%;
+        margin: 1rem;
 
         img {
             max-width: 800px;
