@@ -102,6 +102,7 @@ export const Container = styled.section`
         align-items: center;
         width: 100%;
         margin: 1rem;
+        overflow: hidden;
 
         img {
             max-width: 800px;
@@ -109,11 +110,6 @@ export const Container = styled.section`
             width: 100%;
             height: 100%;
             object-fit: contain;
-
-            /* @media (min-width: 600px) and (max-width: 1024px) {
-                width: 100%;
-                height: 100%;
-            } */
 
             @media (max-width: 600px) {
                 display: none;
