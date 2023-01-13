@@ -24,7 +24,7 @@ export const Container = styled.section`
 
     .container-cards {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
         gap: 1rem;
 
         @media (max-width: 600px) {
