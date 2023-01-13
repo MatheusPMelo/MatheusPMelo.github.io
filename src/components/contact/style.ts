@@ -5,6 +5,7 @@ export const ContainerFullWidth = styled.div`
   position: relative;
   background: #212121;
   padding: 4rem 0;
+  overflow: hidden;
 
   @media (max-width: 600px) {
     width: 100%;
@@ -79,7 +80,7 @@ export const Container = styled.section`
 `
 
 export const AboutMeCard = styled.div`
-    background: ${props => props.theme.colors.secondary};
+    background: linear-gradient(90deg, ${props => props.theme.colors.secondary}, transparent);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
     align-items: center;
@@ -90,6 +91,7 @@ export const AboutMeCard = styled.div`
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
         width: calc(100% - 1rem);
+        background: linear-gradient(180deg, ${props => props.theme.colors.secondary}, transparent);
     }
 
     .container-img{

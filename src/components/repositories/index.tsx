@@ -1,6 +1,9 @@
 import React, { FC, useState, useEffect } from "react";
 import { Container, ContainerFullWidth, Card, ContainerSeeMore } from "./style";
 import api from "../../services/api";
+import "aos/dist/aos.css";
+import Aos from "aos";
+
 
 interface IRepositories {
     html_url: string; // link
@@ -22,7 +25,7 @@ const CardItem: FC<ICardProps> = ({
     title,
     tech,
 }) => (
-    <Card className="container-card">
+    <Card className="container-card" data-aos="fade-up"  data-aos-anchor-placement="bottom">
         <a className="link" href={link}>
             <h2 className="title">{title}</h2>
             <div className="container-tags">
@@ -37,13 +40,18 @@ const CardItem: FC<ICardProps> = ({
 
 const Repositories: React.FC = () => {
     const [repositories, setResporitories] = useState<IRepositories[]>([])
-    const [pagination, setPagination] = useState<any>(4)
+    const [pagination, setPagination] = useState<any>(8)
 
     useEffect(() => {
         api.get('/users/matheuspmelo/repos')
             .then(response => {
                 setResporitories(response.data)
             })
+
+        Aos.init({
+            duration: 1000,
+            delay: 500,
+        })
     }, [])
 
     function incrementRepository() {
@@ -53,8 +61,7 @@ const Repositories: React.FC = () => {
     return (
         <ContainerFullWidth id="repositories">
             <Container>
-
-                <h1>Projects</h1>
+                <h1 data-aos="fade-up">Projects</h1>
 
                 <div className="container-cards">
                     {repositories.slice(0, pagination).map(item => (

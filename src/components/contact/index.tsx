@@ -2,6 +2,8 @@ import React, { FC, useEffect, useState } from "react";
 import { ContainerFullWidth, Container, AboutMeCard } from "./style";
 import api from "../../services/api";
 import { FaInstagram, FaTwitter, FaGithub, FaBuilding, FaHome, FaLinkedin, FaMailBulk } from "react-icons/fa"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface IAboutMe {
     bio: string;
@@ -49,6 +51,8 @@ const socialData = [
 
 ]
 
+
+
 const SocialIcon: FC<ISocialIcon> = ({
     icon,
     url,
@@ -67,9 +71,9 @@ const AboutMeCardData: FC<IAboutCard> = ({
     company,
     location,
 }) => (
-    <AboutMeCard>
+    <AboutMeCard data-aos="fade-left" data-aos-anchor-placement={(window.innerWidth <= 768) ? "top-center" : "bottom"}>
         <div className="container-img">
-            <img src={image} alt="minha foto de perfil do github"/>
+            <img src={image} alt="minha foto de perfil do github" />
         </div>
         <div className="container-content-text">
             <span className="company"><FaBuilding /> I work at {company}</span><br />
@@ -89,7 +93,13 @@ const Contact: React.FC = () => {
             .then(response => {
                 setAboutMe(response.data)
             })
+
+        AOS.init({
+            duration: 800,
+            delay: 200,
+        });
     }, [])
+
 
     return (
         <ContainerFullWidth id="contact">
@@ -103,7 +113,7 @@ const Contact: React.FC = () => {
                         location={aboutMe?.location}
                     />
                 </div>
-                <div className="container-about-me">
+                <div className="container-about-me" data-aos="fade-right" data-aos-anchor-placement={(window.innerWidth <= 768) ? "center" : "bottom"}>
                     <h1>About Me</h1>
                     <p>{aboutMe?.bio}</p>
                     <div className="container-social-media">
