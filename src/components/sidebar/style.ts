@@ -6,10 +6,10 @@ export const ContainerAside = styled.aside`
     right: 0;
     z-index: 1 !important;
     display: flex;
-      align-items: center;
+    align-items: center;
+    height: 100%;
 
     &.offset {
-      height: 100%;
       .containerNav {
         height: 50vh;
         border-radius: 8px 0 0 8px;
