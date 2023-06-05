@@ -6,89 +6,88 @@ import Aos from "aos";
 
 
 interface IRepositories {
-    html_url: string; // link
-    topics: string[]; //tag
-    name: string; // title
-    language: string; // tech
+  html_url: string; // link
+  topics: string[]; //tag
+  name: string; // title
+  language: string; // tech
 }
 
 interface ICardProps {
-    link: string;
-    tag?: string[];
-    title: string;
-    tech: string;
-    delay?: number;
+  link: string;
+  tag?: string[];
+  title: string;
+  tech: string;
+  delay?: number;
 }
 
 const CardItem: FC<ICardProps> = ({
-    link,
-    tag,
-    title,
-    tech,
-    delay,
+  link,
+  tag,
+  title,
+  tech,
+  delay,
 }) => (
-    <Card className="container-card" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-delay={delay}>
-        <a className="link" href={link}>
-            <h2 className="title">{title}</h2>
-            <p>{delay}</p>
-            <div className="container-tags">
-                {tag && tag.map((tag, index) => (
-                    <span className="tag" key={index}>{tag}</span>
-                ))}
-            </div>
-            <p className="tech">{tech}</p>
-        </a>
-    </Card>
+  <Card className="container-card" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-delay={delay}>
+    <a className="link" href={link}>
+      <h2 className="title">{title}</h2>
+      <div className="container-tags">
+        {tag && tag.map((tag, index) => (
+          <span className="tag" key={index}>{tag}</span>
+        ))}
+      </div>
+      <p className="tech">{tech}</p>
+    </a>
+  </Card>
 )
 
 const Repositories: React.FC = () => {
-    const [repositories, setResporitories] = useState<IRepositories[]>([])
-    const [pagination, setPagination] = useState<number>(8)
+  const [repositories, setResporitories] = useState<IRepositories[]>([])
+  const [pagination, setPagination] = useState<number>(8)
 
-    try {
-        useEffect(() => {
-            api.get('/users/matheuspmelo/repos')
-                .then(response => {
-                    setResporitories(response.data)
-                })
+  try {
+    useEffect(() => {
+      api.get('/users/matheuspmelo/repos')
+        .then(response => {
+          setResporitories(response.data)
+        })
 
-            Aos.init({
-                duration: 1000,
-            })
-        }, [])
-    }
-    catch (error) {
-        console.error(`Error: ${error}`)
-    }
-    function incrementRepository() {
-        setPagination(pagination + 4)
-    }
+      Aos.init({
+        duration: 1000,
+      })
+    }, [])
+  }
+  catch (error) {
+    console.error(`Error: ${error}`)
+  }
+  function incrementRepository() {
+    setPagination(pagination + 4)
+  }
 
-    return (
-        <ContainerFullWidth id="repositories">
-            <Container>
-                <h1 data-aos="fade-up">Projects</h1>
+  return (
+    <ContainerFullWidth id="repositories">
+      <Container>
+        <h1 data-aos="fade-up">Projects</h1>
 
-                <div className="container-cards">
-                    {repositories.slice(0, pagination).map((item, index) => (
-                        <CardItem
-                            link={item.html_url}
-                            title={item.name}
-                            tag={item.topics}
-                            tech={item.language}
-                            key={index}
-                            delay={index * 200}
-                        />
-                    ))}
-                </div>
-                <ContainerSeeMore>
-                    {pagination <= repositories?.length && (
-                        <button onClick={incrementRepository}>See more</button>
-                    )}
-                </ContainerSeeMore>
-            </Container>
-        </ContainerFullWidth>
-    )
+        <div className="container-cards">
+          {repositories.slice(0, pagination).map((item, index) => (
+            <CardItem
+              link={item.html_url}
+              title={item.name}
+              tag={item.topics}
+              tech={item.language}
+              key={index}
+              delay={index * 200}
+            />
+          ))}
+        </div>
+        <ContainerSeeMore>
+          {pagination <= repositories?.length && (
+            <button onClick={incrementRepository}>See more</button>
+          )}
+        </ContainerSeeMore>
+      </Container>
+    </ContainerFullWidth>
+  )
 }
 
 export default Repositories;
