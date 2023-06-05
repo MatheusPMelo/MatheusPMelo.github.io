@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Container, ContainerFullWidth } from './style';
 import ReactTypingEffect from 'react-typing-effect';
 import hero from '../../assets/img/hero.png';
 import "aos/dist/aos.css";
 import Aos from 'aos';
-
 
 const Hero: React.FC = () => {
 

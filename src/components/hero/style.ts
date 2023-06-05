@@ -12,7 +12,7 @@ export const ContainerFullWidth = styled.div`
 
 export const Container = styled.section`
     max-width: calc(1170px + 2rem);
-    padding: 1rem;
+    padding: 4rem 1rem;
     margin: 0 auto;
     width: 100%;
     display: grid;
