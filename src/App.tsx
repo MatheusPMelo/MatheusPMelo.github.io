@@ -20,7 +20,6 @@ function App() {
         <Global />
 
         <Sidebar />
-        <Header />
         <Hero />
         <Repositories />
         <Contact />

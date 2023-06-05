@@ -4,35 +4,49 @@ export const ContainerAside = styled.aside`
     position: fixed;
     top: 0;
     right: 0;
-    background-color: ${props => props.theme.colors.secondary};
     z-index: 1 !important;
-    height: 100vh;
-    width: 3rem;
-    box-shadow: 0 0 10px 5px ${props => props.theme.colors.shadow};
+    display: flex;
+      align-items: center;
 
-    animation: loadAnimated 1.5s;
+    &.offset {
+      height: 100%;
+      .containerNav {
+        height: 50vh;
+        border-radius: 8px 0 0 8px;
 
-    @keyframes loadAnimated {
-        from {
-            transform: translateX(100%);
-            opacity: 0;
+        .listNav {
+          height: 50vh;
         }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    @media (max-width: 600px) {
-        width: 100vw;
-        height: 4rem;
-        left: 0;
-        top: calc(100% - 4rem);
-        display: grid;
-        place-items: center;
+      }
     }
 
     .containerNav {
+      background-color: ${props => props.theme.colors.secondary};
+      height: 100vh;
+      width: 3rem;
+      box-shadow: 0 0 10px 5px ${props => props.theme.colors.shadow};
+
+      animation: loadAnimated 1.5s;
+
+      @keyframes loadAnimated {
+          from {
+              transform: translateX(100%);
+              opacity: 0;
+          }
+          to {
+              transform: translateX(0);
+              opacity: 1;
+          }
+      }
+
+      @media (max-width: 600px) {
+          width: 100vw;
+          height: 4rem;
+          left: 0;
+          top: calc(100% - 4rem);
+          display: grid;
+          place-items: center;
+      }
         .listNav {
             display: flex;
             flex-direction: column;
