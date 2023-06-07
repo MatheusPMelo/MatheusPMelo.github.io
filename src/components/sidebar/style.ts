@@ -2,20 +2,26 @@ import styled from "styled-components";
 
 export const ContainerAside = styled.aside`
     position: fixed;
-    top: 0;
+    
     right: 0;
     z-index: 1 !important;
     display: flex;
     align-items: center;
-    height: 100%;
 
-    &.offset {
-      .containerNav {
-        height: 50vh;
-        border-radius: 8px 0 0 8px;
+      @media only screen and (max-width: 600px){
+        bottom: 0;
+      }
 
-        .listNav {
+    @media only screen and (min-width:600px){
+      top: 0;
+      height: 100%;
+      &.offset {
+        .containerNav {
           height: 50vh;
+          border-radius: 8px 0 0 8px;
+            .listNav {
+              height: 50vh;
+            }
         }
       }
     }
@@ -43,10 +49,11 @@ export const ContainerAside = styled.aside`
           width: 100vw;
           height: 4rem;
           left: 0;
-          top: calc(100% - 4rem);
+          bottom: calc(0 + 4rem);
           display: grid;
           place-items: center;
-      }
+
+        }
         .listNav {
             display: flex;
             flex-direction: column;
