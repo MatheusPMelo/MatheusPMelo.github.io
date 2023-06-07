@@ -82,12 +82,6 @@ export const Container = styled.section`
 
             @media (max-width: 600px) {
                 width: 100%;
-                margin: 5rem 0 0 0;
-                
-                &:hover{
-                    transform: scale(1);
-                    box-shadow: 0 0 5px 3px ${props => props.theme.colors.shadow};
-                }
             }
             
             &:hover{
