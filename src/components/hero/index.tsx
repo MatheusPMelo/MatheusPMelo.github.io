@@ -24,8 +24,8 @@ const Hero: React.FC = () => {
       <Container>
         <div className="container-text">
           <div className="texts">
-            <h1 className='hero-title'><ReactTypingEffect eraseDelay={2500} speed={300} text={["Front End", "Mobile"]} /> Developer</h1>
-            <p>Vue, React, React Native</p>
+            <h1 className='hero-title'><ReactTypingEffect eraseDelay={2500} speed={300} text={["Full Stack", "Mobile"]} /> Developer</h1>
+            <p>Laravel, Python, Vue, React, React Native</p>
           </div>
           <a href="#contact">Contact</a>
         </div>
