@@ -17,7 +17,6 @@ interface ICardProps {
   tag?: string[];
   title: string;
   tech: string;
-  delay?: number;
 }
 
 const CardItem: FC<ICardProps> = ({
@@ -25,9 +24,8 @@ const CardItem: FC<ICardProps> = ({
   tag,
   title,
   tech,
-  delay,
 }) => (
-  <Card className="container-card" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-delay={delay}>
+  <Card className="container-card">
     <a className="link" href={link}>
       <h2 className="title">{title}</h2>
       <div className="container-tags">
@@ -66,7 +64,7 @@ const Repositories: React.FC = () => {
   return (
     <ContainerFullWidth id="repositories">
       <Container>
-        <h1 data-aos="fade-up">Projects</h1>
+        <h1 data-aos="fade-right">Projects</h1>
 
         <div className="container-cards">
           {repositories.slice(0, pagination).map((item, index) => (
@@ -76,13 +74,15 @@ const Repositories: React.FC = () => {
               tag={item.topics}
               tech={item.language}
               key={index}
-              delay={index * 200}
             />
           ))}
         </div>
         <ContainerSeeMore>
           {pagination <= repositories?.length && (
             <button onClick={incrementRepository}>See more</button>
+          )}
+          {pagination >= repositories?.length && (
+            <h2>Isso é Tudo. Obrigado! :)</h2>
           )}
         </ContainerSeeMore>
       </Container>

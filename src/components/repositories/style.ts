@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerFullWidth = styled.div`
   width: calc(100% - 3rem);
   position: relative;
-  padding:  0 0 3rem 0;
+  padding: 5rem 0;
 
   @media (max-width: 600px) {
     width: 100%;
@@ -26,6 +26,7 @@ export const Container = styled.section`
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
         gap: 1rem;
+        overflow: hidden;
 
         @media (max-width: 600px) {
             grid-template-columns: 1fr;
@@ -40,7 +41,7 @@ export const Card = styled.div`
     border-radius: 1rem;
 
     .title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-bottom: 1rem;
     }
 
@@ -65,6 +66,7 @@ export const ContainerSeeMore = styled.div`
     width: 100%;
     display: grid;
     place-items: center;
+    margin-top: 5rem;
 
     > button {
         margin-top: 2rem;
@@ -74,10 +76,18 @@ export const ContainerSeeMore = styled.div`
         border-radius: .5rem;
         color: #fff;
         background: ${props => props.theme.colors.secondary};
+        transition: all .3s ease-in-out;
 
         &:hover {
             border: 1px solid #fff;
             cursor: pointer;
         }
+    }
+
+    > h2 {
+        transition: all .3s ease-in-out;
+        color: ${props => props.theme.colors.text};
+        font-size: 1.5rem;
+        text-shadow: 0 0 15px ${props => props.theme.colors.shadow};
     }
 `

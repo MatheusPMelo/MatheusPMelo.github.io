@@ -78,15 +78,16 @@ export const Container = styled.section`
             text-decoration: none;
             color: white;
             font-size: 1.2rem;
-            font-wheight: 900;
+            font-wheight: 600;
+            transition: all 0.3s ease-in-out;
 
             @media (max-width: 600px) {
                 width: 100%;
             }
             
             &:hover{
-                transform: scale(1.05);
-                box-shadow: 0 0 5px 3px ${props => props.theme.colors.shadow};
+                transform: translateY(-10px);
+                box-shadow: 0 10px 10px 3px ${props => props.theme.colors.shadow};
             }
         }
     }
@@ -101,7 +102,7 @@ export const Container = styled.section`
         img {
             max-width: 800px;
             max-height: 800px;
-            width: 100%;
+            width: 90%;
             height: 100%;
             object-fit: contain;
 
