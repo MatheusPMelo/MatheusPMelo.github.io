@@ -6,7 +6,7 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         font-family: 'Ubuntu', sans-serif;
-        transition: all .3s ease;
+        scroll-behavior: smooth;
     }
 
     body {

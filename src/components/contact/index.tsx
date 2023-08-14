@@ -76,10 +76,12 @@ const AboutMeCardData: FC<IAboutCard> = ({
             <img src={image} alt="minha foto de perfil do github" />
         </div>
         <div className="container-content-text">
-            <span className="company"><FaBuilding /> I work at {company}</span><br />
-            <span className="location"><FaHome /> I live in {location}</span><br />
-            <span className="followers">Followers: {followers}</span>
-            <span className="following">Following: {following}</span>
+            <span className="company"><FaBuilding /> I work at {company}</span>
+            <span className="location"><FaHome /> I live in {location}</span>
+            <div className="container-follows">
+                <span className="followers">Followers: {followers}</span>
+                <span className="following">Following: {following}</span>
+            </div>
         </div>
     </AboutMeCard>
 )

@@ -110,6 +110,8 @@ export const AboutMeCard = styled.div`
     }
 
     .container-content-text{
+        display: grid;
+        gap: 1rem;
         
         @media (max-width: 600px) {
             display: flex;
@@ -119,15 +121,15 @@ export const AboutMeCard = styled.div`
         }
         .company,
         .location{
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         .following{
-            font-size: .7rem;
+            font-size: 1rem;
         }
         .followers{
             margin: 0 1rem 0 0;
-            font-size: .7rem;
+            font-size: 1rem;
 
             @media (max-width: 600px) {
                 margin: unset;

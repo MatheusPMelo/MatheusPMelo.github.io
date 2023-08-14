@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const ContainerAside = styled.aside`
+    *{
+      transition: all 0.3s ease-in-out;
+    }
+
     position: fixed;
-    
     right: 0;
     z-index: 1 !important;
     display: flex;
@@ -93,6 +96,9 @@ export const ContainerAside = styled.aside`
                     }
 
                     svg {
+                        height: 23px;
+                        width: 23px;
+
                         @media (max-width: 600px) {
                             height: 1.5rem;
                             width: 1.5rem;
