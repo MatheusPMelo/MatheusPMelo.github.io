@@ -47,6 +47,9 @@ export const Card = styled.div`
 
     .container-tags{
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
         .tag{
             font-size: 0.8rem;
             color: ${props => props.theme.colors.text};

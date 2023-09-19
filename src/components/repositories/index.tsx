@@ -81,9 +81,6 @@ const Repositories: React.FC = () => {
           {pagination <= repositories?.length && (
             <button onClick={incrementRepository}>See more</button>
           )}
-          {pagination >= repositories?.length && (
-            <h2>Isso é Tudo. Obrigado! :)</h2>
-          )}
         </ContainerSeeMore>
       </Container>
     </ContainerFullWidth>
